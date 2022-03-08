@@ -436,6 +436,8 @@ div a {
 .list-info>li{
     border: 0.10px solid lightgray;
     padding: 10px 20px;
+    cursor: pointer;
+    user-select: none;
 }
 .list-info>li:hover{
     border-left: 5px solid #40C4FF;
