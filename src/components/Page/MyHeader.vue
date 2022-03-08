@@ -5,33 +5,7 @@
             <nav class="pt-5">
                 <ul class="nav d-flex justify-content-center">
                     <img class="px-5 mx-5" src="..\public\assets\img\logo-light.png" alt="">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">COURSES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">INSTRUCTORS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">EVENTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">PAGES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ELEMENTS</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#"><i class="fa-regular fa-clipboard"></i></a>
-                    </li>
-                    <li class="" >
-                        <a class="nav-link" href="#"><i class="fa-solid fa-bars"></i></a>
-                    </li>
+                    <MyNavMenu v-for="(item, index) in list" :key="index" :menu="item"/>
                 </ul>
             </nav>
             <div class="text-center pt-5 ">
@@ -49,11 +23,73 @@
 
 <script>
 import MyDeck from '../sub-components/MyDeck.vue'
+import MyNavMenu from '../sub-components/MyNavMenu.vue'
 export default {
     name: 'MyHeader',
     components: {
         MyDeck,
+        MyNavMenu,
+    },
+    data () {
+    return {
+      list: [{
+          name:'HOME',
+          link:'#',
+          type:'',
+          fn:function (){},
+      },
+      {
+          name:'COURSES',
+          link:'#',
+          type:'',
+          fn:function (){},
+      },
+      {
+          name:'INSTRUCTORS',
+          link:'#',
+          type:'',
+          fn:function (){},
+      },
+      {
+          name:'EVENTS',
+          link:'#',
+          type:'',
+          fn:function (){},
+      },
+      {
+          name:'PAGES',
+          link:'#',
+          type:'',
+          fn:function (){},
+      },
+      {
+          name:'ELEMENTS',
+          link:'#',
+          type:'',
+          fn:function (){},
+      },
+      {
+          name:'',
+          link:'#',
+          type:'search',
+          fn:function (){},
+      },
+      {
+          name:'',
+          link:'#',
+          type:'market',
+          fn:function (){},
+      },
+      {
+          name:'',
+          link:'#',
+          type:'menu',
+          fn:function (){},
+      },
+      ]
     }
+  }
+    
 }
 </script>
 
